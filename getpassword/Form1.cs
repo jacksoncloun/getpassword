@@ -59,7 +59,7 @@ namespace getpassword
             MatchCollection TitleMatchs = getcollection(stream2, regexstr);
             foreach (Match NextMatch in TitleMatchs)
             {
-                var TitleMatchs1 = getcollection(NextMatch.Groups[1].Value.Replace(" ", "").Replace("\r", ""), regexstr2);
+                var TitleMatchs1 = getcollection(NextMatch.Groups[1].Value.Replace(" ", "").Replace("\r", "").Replace("-->", "").Replace("auth_sha1_v4tls1.2_ticket_auth", ""), regexstr2);
                 foreach (Match item in TitleMatchs1)
                 {
                     var rictext = item.Groups[1].Value.Replace(" ", "").Replace("ClicktoviewQRCode", "");
